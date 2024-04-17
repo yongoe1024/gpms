@@ -39,3 +39,8 @@ gpms-ui 中的`README.md`为前端文档
 #### 接口文档
 [http://localhost:8081/gpms/doc.html](https://localhost:8081/gpms/doc.html)  
 注：携带token的问题，找到文档管理-全局参数设置，然后输入Authorization，参数为登录接口返回的token，复制即可
+
+#### 示例图片
+![img.png](./img/img.png)
+![img_1.png](./img/img_1.png)
+![img_2.png](./img/img_2.png)

@@ -4,14 +4,14 @@
 
     <div style="width: 98%;margin: 1% 1% 1% 1%">
       <el-row :gutter="20">
-        <el-col :span="24">
+        <el-col :span="12">
           <el-card shadow="always">
             <div ref="pieChart"
                  style="width: 100%; height: 400px;"></div>
           </el-card>
         </el-col>
 
-        <el-col :span="24">
+        <el-col :span="12">
           <el-card shadow="always">
             <div ref="lineChart"
                  style="width: 100%; height:400px"></div>
