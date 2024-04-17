@@ -73,6 +73,7 @@ export default {
       immediate: true,
       handler (nv) {
         if (nv != null) {
+          nv = nv + ''
           this.myValue = nv
           if (this.type == 'checkboxtag' || this.type == 'checkbox')
             this.myCheckbox = !!nv ? nv.split(',') : []
