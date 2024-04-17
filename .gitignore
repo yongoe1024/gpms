@@ -1,0 +1,16 @@
+.idea
+.vscode
+
+.DS_Store
+node_modules
+dist
+dist.zip
+package-lock.json
+
+target
+gpms-file
+*.iml
+pom.xml.versionsBackup
+static/
+
+pnpm-lock.yaml

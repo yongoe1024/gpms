@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yongoe.gpms.gpms.mapper.ProjectMapper">
+
+    <!--    获取分页数据-->
+    <select id="getProjectByPage" resultType="com.yongoe.gpms.entity.Project">
+        select *
+        from t_project
+        <where>
+            <if test="null != project.id">
+                and id = #{project.id}
+            </if>
+            <if test="null != project.name and ''!=project.name">
+                and name LIKE CONCAT('%',#{project.name  },'%')
+            </if>
+            <if test="null != project.projectCode and ''!=project.projectCode">
+                and project_code LIKE CONCAT('%',#{project.projectCode  },'%')
+            </if>
+            <if test="null != project.runType and ''!=project.runType">
+                and run_type LIKE CONCAT('%',#{project.runType  },'%')
+            </if>
+            <if test="null != project.technology and ''!=project.technology">
+                and technology LIKE CONCAT('%',#{project.technology  },'%')
+            </if>
+            <if test="null != project.details and ''!=project.details">
+                and details LIKE CONCAT('%',#{project.details  },'%')
+            </if>
+            <if test="null != project.img and ''!=project.img">
+                and img LIKE CONCAT('%',#{project.img  },'%')
+            </if>
+            <if test="null != project.state">
+                and state = #{project.state}
+            </if>
+            <if test="null != project.login and ''!=project.login">
+                and login LIKE CONCAT('%',#{project.login  },'%')
+            </if>
+            <if test="null != project.url and ''!=project.url">
+                and url LIKE CONCAT('%',#{project.url  },'%')
+            </if>
+            <if test="null != project.createTime">
+                and create_time = #{project.createTime}
+            </if>
+            <if test="null != project.updateTime">
+                and update_time = #{project.updateTime}
+            </if>
+            <if test="null != project.createBy and ''!=project.createBy">
+                and create_by LIKE CONCAT('%',#{project.createBy  },'%')
+            </if>
+            <if test="null != project.updateBy and ''!=project.updateBy">
+                and update_by LIKE CONCAT('%',#{project.updateBy  },'%')
+            </if>
+        </where>
+        order by create_time desc
+    </select>
+
+
+</mapper>

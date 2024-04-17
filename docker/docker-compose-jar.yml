@@ -1,0 +1,14 @@
+version: '3'
+services:
+  myapp:
+    image: amazoncorretto:8
+    environment:
+      - TZ="Asia/Shanghai"
+    ports:
+      - "8080:8080"
+    volumes:
+      - /www/wwwroot/springboot/13.jar:/app/app.jar
+      - /etc/localtime:/etc/localtime
+    working_dir: /app
+    command: java -Dfile.encoding=utf8  -jar app.jar
+

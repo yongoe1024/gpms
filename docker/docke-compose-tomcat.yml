@@ -1,0 +1,13 @@
+version: '3'
+services:
+  myapp:
+    image: tomcat:7
+    #  tomcat:8.5.56-jdk8-corretto
+    environment:
+      - TZ="Asia/Shanghai"
+      - LANG="C.UTF-8"
+    ports:
+      - "8013:8080"
+    volumes:
+      - /www/wwwroot/ssm/13.war:/usr/local/tomcat/webapps/13.war
+      - /etc/localtime:/etc/localtime
