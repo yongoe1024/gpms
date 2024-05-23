@@ -13,21 +13,6 @@ const routes = [
     component: () => import('@/views/Login2')
   },
   {
-    path: '/register',
-    name: '注册账号',
-    component: () => import('@/views/user/Register2')
-  },
-  {
-    path: '/forget',
-    name: '找回密码',
-    component: () => import('@/views/user/Forget2'),
-  },
-  {
-    path: '/oauth/qq',
-    name: 'QQ',
-    component: () => import('@/views/oauth/QQ'),
-  },
-  {
     path: '',
     name: '',
     component: () => import('@/views/Index'),
@@ -46,21 +31,6 @@ const routes = [
         path: '/password',
         name: '修改密码',
         component: () => import('@/views/user/Password'),
-      },
-      {
-        path: '/letter',
-        name: '信件',
-        component: () => import('@/views/letter/Letter'),
-      },
-      {
-        path: '/letter-info',
-        name: '信件详情',
-        component: () => import('@/views/letter/LetterInfo'),
-      },
-      {
-        path: '/test',
-        name: '测试',
-        component: () => import('@/views/Test'),
       },
     ]
   },
